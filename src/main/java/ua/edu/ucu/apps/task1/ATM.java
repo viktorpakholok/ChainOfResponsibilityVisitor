@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps;
+package ua.edu.ucu.apps.task1;
 
 public class ATM {
     private Banknote100 firstItem;

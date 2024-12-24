@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps;
+package ua.edu.ucu.apps.task1;
 
 public class Banknote5 extends Banknote {
     private Banknote nextItem;
