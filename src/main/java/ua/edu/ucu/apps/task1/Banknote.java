@@ -22,7 +22,7 @@ public abstract class Banknote {
             }
         }
 
-        System.out.format("PLease revieve %d x %d\n", quantity, banknoteNominale);
+        System.out.format("Please recieve %d x %d\n", quantity, banknoteNominale);
            
     }
 }

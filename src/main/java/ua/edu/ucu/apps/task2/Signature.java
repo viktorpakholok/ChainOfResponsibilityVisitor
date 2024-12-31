@@ -1,11 +1,13 @@
 package ua.edu.ucu.apps.task2;
 
-
-import java.util.UUID;
 import java.util.function.Consumer;
 
+import lombok.Getter;
+
 public class Signature<T> extends Task<T> {
-    public Consumer<T> consumer;
+    @Getter
+    private Consumer<T> consumer;
+
     public Signature(Consumer<T> consumer) {
         this.consumer = consumer;
     }
