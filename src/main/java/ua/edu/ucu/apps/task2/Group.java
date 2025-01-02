@@ -7,8 +7,8 @@ import java.util.UUID;
 
 import lombok.Getter;
 
+@Getter
 public class Group<T> extends Task<T> {
-    @Getter
     private String groupUuid;
     private List<Task<T>> tasks;
 
@@ -31,7 +31,12 @@ public class Group<T> extends Task<T> {
 
     @Override
     public void apply(T arg) {
+
         this.freeze();
+
+        StampingAPI<T> stampingVisitor = new StampingAPI<>(groupUuid);
+        this.accept(stampingVisitor);
+
         tasks = Collections.unmodifiableList(tasks);
         for (Task<T> task: tasks) {
             task.apply(arg);
